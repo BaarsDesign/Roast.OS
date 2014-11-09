@@ -1,0 +1,146 @@
+@-webkit-keyframes fadeIn {	from {opacity: 0; top: -5px;} to {opacity: 1; top: 0px;}}
+@keyframes fadeIn {			from {opacity: 0; top: -5px;} to {opacity: 1; top: 0px;}}
+
+.settings {
+	overflow: hidden;
+}
+.settings .browser {
+	overflow-y: auto;
+	overflow-x: hidden;
+	min-width: 400px;
+	height: 100%!important;
+}
+
+.settings .browser h1 {
+	padding: 10px 10px 0 20px;
+	margin: 0;
+	font-size: 26px;
+	text-shadow: none;
+	color: #8A8A8A;
+	font-weight: 100;
+}
+
+.settings .browser > div {
+	-webkit-animation: fadeIn 0.4s;
+	   -moz-animation: fadeIn 0.4s;
+	    -ms-animation: fadeIn 0.4s;
+	     -o-animation: fadeIn 0.4s;
+	        animation: fadeIn 0.4s;
+	        position: relative;
+}
+
+
+/* - - - - - PROFILE - - - - - */
+
+.settings .browser .profile .userWallpaper {
+	height: 160px;
+	background-size: cover;
+	background-position: center center;
+	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
+}
+.settings .browser .profile .currentUser {
+	height: 180px;
+	position: relative;
+	border-top: 1px solid rgba(0, 0, 0, 0.09);
+	margin: 20px 0;
+	padding-left: 20px;
+}
+
+.settings .browser .profile .currentUser p {
+	padding: 10px 10px 0 0;
+	margin: 0;
+	font-size: 15px;
+	text-shadow: none;
+	color: #333333;
+	font-weight: 100;
+}
+.settings .browser .profile .currentUser p span {
+	font-weight: 400;
+	display: inline-block;
+	width: 140px;
+}
+.settings .browser .profile h1 span.edit,
+.settings .browser .profile .currentUser p span.edit {
+	color: #BBBBBB;
+	transition: 0.2s;
+}
+.settings .browser .profile h1 span.edit:hover,
+.settings .browser .profile .currentUser p span.edit:hover {
+	color: #6689CD;
+	text-shadow: 0 1px 0 #FFF;
+}
+.settings .browser .profile .profileIMG {
+	height: 140px;
+	width: 140px;
+	position:absolute;
+	right: 20px;
+	top: 120px;
+	border-radius:4px;
+	border: 1px solid white;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.67);
+	overflow: hidden;
+	background: #ffffff;
+}
+.settings .browser .profile .profileIMG img {
+	height: 138px;
+	width: 138px;
+	position: relative;
+	top: 0;
+	transition: 0.3s;
+	z-index: 600;
+}
+.settings .browser .profile .profileIMG:hover img {
+	top: -17px;
+}
+.settings .browser .profile .profileIMG .editIMG {
+	position: absolute;
+	bottom: -7px;
+	height: 17px;
+	text-align: center;
+	width: 100%;
+	z-index: 500;
+	transition: 0.2s;
+	padding: 2px 0 0 0;
+}
+.settings .browser .profile .profileIMG:hover .editIMG {
+	bottom: 0;
+}
+.settings .browser .profile .profileIMG .editIMG:hover {
+	color: #6689CD;
+	text-shadow: 0 1px 0 #fff;
+}
+/* - - - - - USERS - - - - - */
+.settings .browser .users {
+
+}
+.settings .browser .users ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.settings .browser .users ul li {
+	padding: 0px 7px 14px 7px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+.settings .browser .users ul li .imageContainer {
+	top: 8px;
+	height: 25px;
+	width: 25px;
+	margin-right: 7px;
+	position: relative;
+	display: inline-block;
+	border-radius: 3px;
+	border: 1px solid #FFF;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.67);
+	background: #FFF;
+	overflow: hidden;
+}
+.settings .browser .users ul li img {
+	height: 23px;
+	width: 23px;
+}
+.settings .browser .users ul li span {
+	width: 200px;
+	font-weight: 700;
+	display: inline-block;
+}

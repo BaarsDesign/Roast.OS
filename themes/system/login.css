@@ -1,0 +1,200 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+@-webkit-keyframes logofade {
+	0%   { background-size: 25vh;  height: 100vh; top: 0vh; opacity: 0;}
+	30%  { background-size: 25vh;  height: 100vh; top: 0vh; opacity: 1;}
+	100% { background-size: 10vh;  height:  25vh; top: 25vh;}
+}
+
+@-webkit-keyframes formfade {
+	0%   { opacity: 0}
+	50%  { opacity: 0}
+	100% { opacity: 1}
+}
+
+@keyframes loader {
+	0% {width: 0;height: 0;z-index: 1;}
+	50% {width: 10em;height: 10em;z-index: 1;}
+	100% {display: none;}
+}
+
+@-webkit-keyframes loader {
+	0% {width: 0;height: 0;z-index: 1;}
+	50% {width: 10em;height: 10em;z-index: 1;}
+	100% {display: none;}
+}
+
+*, *:before, *:after  {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+
+body {
+	background: #982438;
+	font-family: "Open Sans";
+}
+
+
+audio {
+	display: none;
+}
+
+
+.circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	z-index: 1;
+	-webkit-transform: translate(-50%, -50%);
+	   -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	     -o-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+
+	-webkit-transition: all 200ms ease;
+	   -moz-transition: all 200ms ease;
+	    -ms-transition: all 200ms ease;
+	     -o-transition: all 200ms ease;
+	        transition: all 200ms ease;
+}
+.circle:nth-child(1) {
+	z-index: 2;
+	background: #752330;
+	-webkit-animation: loader 1s infinite;
+	   -moz-animation: loader 1s infinite;
+	    -ms-animation: loader 1s infinite;
+	     -o-animation: loader 1s infinite;
+	        animation: loader 1s infinite;
+	-webkit-animation-timing-function: ease;
+	   -moz-animation-timing-function: ease;
+	    -ms-animation-timing-function: ease;
+	     -o-animation-timing-function: ease;
+	        animation-timing-function: ease;
+	-webkit-animation-delay: 0s;
+	   -moz-animation-delay: 0s;
+	    -ms-animation-delay: 0s;
+	     -o-animation-delay: 0s;
+	        animation-delay: 0s;
+}
+.circle:nth-child(2) {
+	background: #B4414F;
+	-webkit-animation: loader 1s infinite;
+	   -moz-animation: loader 1s infinite;
+	    -ms-animation: loader 1s infinite;
+	     -o-animation: loader 1s infinite;
+	        animation: loader 1s infinite;
+	-webkit-animation-timing-function: ease;
+	   -moz-animation-timing-function: ease;
+	    -ms-animation-timing-function: ease;
+	     -o-animation-timing-function: ease;
+	        animation-timing-function: ease;
+	-webkit-animation-delay: 0.5s;
+	   -moz-animation-delay: 0.5s;
+	    -ms-animation-delay: 0.5s;
+	     -o-animation-delay: 0.5s;
+	        animation-delay: 0.5s;
+}
+
+
+
+h1 {
+	color: white;
+}
+
+#logo {
+	-webkit-animation: logofade 4.5s;
+	position: absolute;
+	top: 25vh;
+	left: 0;
+	width: 100vw;
+	height: 25vh;
+	background: #982438 url(img/bean.svg) no-repeat center center;
+	background-size: 10vh;
+	z-index: 1000;
+}
+#logo.register {
+	-webkit-animation: none;
+	top: 15vh;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+textarea, input {
+	outline: none;
+}
+
+form {
+	-webkit-animation: formfade 6.7s;
+	display: block;
+	position: absolute;
+	top: 60vh;
+	left: 50vw;
+	-webkit-transform: translate(-50%, -30%);
+	width: 360px;
+	height: 25vh;
+	z-index: 800;
+	border-radius: 10px;
+}
+form.register {
+	-webkit-animation: none;
+	top: 50vh;
+}
+
+form input,
+div.fakeform {
+	display: inline-block;
+	width: calc(100% - 60px);
+	margin: 10px 10px 0 0;
+	border: none;
+	background: white;
+	padding: 5px;
+	height: 35px;
+	border-radius: 0 5px 5px 0;
+}
+
+form input[type="checkbox"] {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	height: 17px;
+	width: 17px;
+}
+
+form input[type="submit"] {
+	border-radius: 5px;
+	width: calc(100% - 30px);
+	margin: 10px;
+}
+
+form input.wrong {
+	background: white url(img/formError.svg) no-repeat;
+	background-size: 18px;
+	background-position: 272px center;
+}
+
+form span {
+	display: inline-block;
+	margin: 10px 0 0 10px;
+	border: none;
+	background: white;
+	text-align: center;
+	padding: 5px;
+	height: 35px;
+	width: 30px;
+	background: #ddd;
+	color: #777;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+	border-radius: 5px 0 0 5px;
+}
